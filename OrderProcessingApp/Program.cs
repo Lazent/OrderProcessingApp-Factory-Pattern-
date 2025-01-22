@@ -1,12 +1,12 @@
 ﻿using OrderProcessingApp.Factories;
 using OrderProcessingApp.Services;
-
 namespace OrderProcessingApp
 {
     public class Program
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Order Processing Application");
 
             IOrderFactory physicalFactory = new PhysicalOrderFactory();
@@ -15,9 +15,9 @@ namespace OrderProcessingApp
 
             var orderProcessor = new OrderProcessor();
 
-            orderProcessor.AddOrder(physicalFactory.CreateOrder("PH32331"));
-            orderProcessor.AddOrder(digitalFactory.CreateOrder("DG68743"));
-            orderProcessor.AddOrder(subscriptionFactory.CreateOrder("SUB14327"));
+            orderProcessor.AddOrder(physicalFactory.CreateOrder());
+            orderProcessor.AddOrder(digitalFactory.CreateOrder());
+            orderProcessor.AddOrder(subscriptionFactory.CreateOrder());
 
             orderProcessor.ProcessAllOrders();
             Console.WriteLine("\nAll orders processed successfully!");

@@ -9,9 +9,9 @@ namespace OrderProcessingApp.Factories
 {
     public class SubscriptionOrderFactory: IOrderFactory
     {
-        public Order CreateOrder(string orderId)
+        public Order CreateOrder()
         {
-            return new SubscriptionOrder { OrderId = orderId };
+            return new SubscriptionOrder();
         }
     }
 }

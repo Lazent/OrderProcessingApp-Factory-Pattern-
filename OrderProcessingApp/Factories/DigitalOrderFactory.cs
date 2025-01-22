@@ -9,9 +9,9 @@ namespace OrderProcessingApp.Factories
 {
     public class DigitalOrderFactory: IOrderFactory
     {
-        public Order CreateOrder(string orderId)
+        public Order CreateOrder()
         {
-            return new DigitalOrder { OrderId = orderId };
+            return new DigitalOrder();
         }
     }
 }

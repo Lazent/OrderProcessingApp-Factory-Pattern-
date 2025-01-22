@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderProcessingApp.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace OrderProcessingApp.Models
 {
     public abstract class Order
     {
-        public string OrderId { get; set; }
+        public string OrderId = OrderIdGenerator.GenerateOrderId();
         public abstract void ProcessOrder();
     }
 }

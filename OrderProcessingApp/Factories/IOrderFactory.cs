@@ -9,6 +9,6 @@ namespace OrderProcessingApp.Factories
 {
     public interface IOrderFactory
     {
-        Order CreateOrder(string orderId);
+        Order CreateOrder();
     }
 }
