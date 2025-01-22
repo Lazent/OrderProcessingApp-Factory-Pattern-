@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace OrderProcessingApp.Models
 {
-    internal class DigitalOrder
+    public class DigitalOrder: Order
     {
+        public override void ProcessOrder()
+        {
+            Console.WriteLine($"Order ID: {OrderId} - Sending digital product to email");
+        }
     }
 }

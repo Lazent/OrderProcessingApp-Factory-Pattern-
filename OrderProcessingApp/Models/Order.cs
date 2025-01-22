@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace OrderProcessingApp.Models
 {
-    internal class Order
+    public abstract class Order
     {
+        public string OrderId { get; set; }
+        public abstract void ProcessOrder();
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace OrderProcessingApp.Models
 {
-    internal class SubscriptionOrder
+    public class SubscriptionOrder: Order
     {
+        public override void ProcessOrder()
+        {
+            Console.WriteLine($"Order ID: {OrderId} - Activating subscription");
+        }
     }
 }

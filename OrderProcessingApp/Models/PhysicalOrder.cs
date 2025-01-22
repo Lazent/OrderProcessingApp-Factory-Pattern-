@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace OrderProcessingApp.Models
 {
-    internal class PhysicalOrder
+    public class PhysicalOrder: Order
     {
+        public override void ProcessOrder()
+        {
+            Console.WriteLine($"Order ID: {OrderId} - Shipping physical product");
+        }
     }
 }
