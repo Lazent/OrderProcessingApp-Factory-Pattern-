@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderProcessingApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace OrderProcessingApp.Factories
 {
-    internal class PhysicalOrderFactory
+    public class PhysicalOrderFactory: IOrderFactory
     {
+        public Order CreateOrder(string orderId)
+        {
+            return new PhysicalOrder { OrderId = orderId };
+        }
     }
 }
